@@ -46,4 +46,15 @@
 - We will focus on a broad set of interrelated ideas
 - Two fundamental ideas are algorithms and information processing
 
+## Algorithms
+
+- A process or set of rules to be followed in calculations or other problem-solving operations, especially by a computer
+- Features of an algorithm:
+    - Consists of a finite number of instructions
+    - Each individual instruction is well defined
+        - Action described by the instruction can be performed effectivelty or be executed by a computing agent
+    - Eventually stops after arriving at a solution to a problem
+    - Solves a general class of problems
+- Examples: Baking a cake, Changing a tire, Math operations
+
 
