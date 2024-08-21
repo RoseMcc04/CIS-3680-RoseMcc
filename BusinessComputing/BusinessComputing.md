@@ -79,3 +79,22 @@
     - Memory
     - Set of I/O devices
 - Computers can also communicate with the external world through various ports that connect them to networks and to other devices
+
+|            CPU            |
+|-------------|-------------|
+| Part of CPU | Description |
+|-------------|-------------|
+| Control Unit| Instructions|
+|  Logic Unit |Math/Decision|
+| Cache Memory| Buffer/Data |
+|  Registers  |Work. Memory |
+
+## System Bus
+- Processor
+    - CPU <-- ROM --> Connection Unit
+- Main Memory
+- Disk
+- Screen
+- Keyboard
+- Network
+- Other Peripherals
