@@ -34,3 +34,16 @@
                 +-------------+
 
 ```
+
+## An Information System
+
+- A set of interrelated components that collect, process, store, and distribute information to support decision making and control in an organization
+- This includes analysis and visualization
+- Analytics applications are a subset of Information Systems Applications
+
+## Building an Information System
+
+- We will focus on a broad set of interrelated ideas
+- Two fundamental ideas are algorithms and information processing
+
+
