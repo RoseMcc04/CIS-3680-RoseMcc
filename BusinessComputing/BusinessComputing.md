@@ -10,10 +10,27 @@
 
 ## Objectives
 
-- Define what is meant by an information system
-- Define and describe algorithms
-- Describe information processing
-- Examine the structure of an information system
-- Describe how an application is made
+1. Define what is meant by an information system
+2. Define and describe algorithms
+3. Describe information processing
+4. Examine the structure of an information system
+5. Describe how an application is made
 
+## Venn Diagram
+```css
++-------------------+       +-------------------+
+|                   |       |                   |
+|                   |       |                   |
+|     Business       |       |    Technology     |
+|                   |       |                   |
+|                   |       |                   |
++-------------------+       +-------------------+
+            \                   /
+             \                 /
+              \               /
+                +-------------+
+                | Information |
+                |  Systems    |
+                +-------------+
 
+```
