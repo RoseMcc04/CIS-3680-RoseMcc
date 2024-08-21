@@ -21,7 +21,7 @@
 +-------------------+       +-------------------+
 |                   |       |                   |
 |                   |       |                   |
-|     Business       |       |    Technology     |
+|     Business      |       |    Technology     |
 |                   |       |                   |
 |                   |       |                   |
 +-------------------+       +-------------------+
@@ -57,4 +57,25 @@
     - Solves a general class of problems
 - Examples: Baking a cake, Changing a tire, Math operations
 
+## Information Processing
 
+- Information is commonly referred to as data
+- In carrying out the instructions of an algorithm, the computing agent manipulates information
+    - Input data
+    - Process (transform) information according to well-defined rules
+    - Computer scientists have discovered ways to represent many other things, such as images, sound, and video
+
+## Modern Computer Structure
+
+- Hardware:
+    - physical devices required to execute algorithms
+- Software:
+    - set of these algorithms, represented as programs in particular programming languages
+
+## Computer Hardware
+
+- Basic hardware components of a computer are:
+    - Central processing unit (CPU)
+    - Memory
+    - Set of I/O devices
+- Computers can also communicate with the external world through various ports that connect them to networks and to other devices
