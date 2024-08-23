@@ -119,7 +119,7 @@
 - A program stored in computer memory must be represented in binary digits, or machine code
 - A loader takes a set of machine language instructions as input and loads them into the appropriate memory locations
 
-# How Computer Software is Made
+## How Computer Software is Made
 
 - Scientists have developed high-level programming languages for expressing algorithms that resemble English
 - Programmers usually start by writing high-level language statements, called source code, in a text editor
