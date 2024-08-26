@@ -39,3 +39,18 @@
         - Call the function exit()
 
 ## Input, Processing, and Output
+
+- Programs usually accept inputs from a source, process them, and output results to a destination
+    - In terminal-based interactive programs, these are the keyboard and terminal display
+- In a Python shell, inputs are Python expressions or statements
+    - Outputs are the results displayed in the shell
+- Programmers can also force output of a value by using the print() function
+```python
+print(<expression>)
+print(<expression>,...,<expression>)        
+```
+- Example:
+```shell
+>>>print("Hi there")
+Hi there
+```
