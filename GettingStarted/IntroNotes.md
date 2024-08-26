@@ -71,3 +71,44 @@ The sum is 69
 | `print(<expression>, ...,<expression>)`| Evaluates the expressions and displays them, separated by one space, in the console window. |
 | `<string 1> + <string 2>`             | Glues the two strings together and returns the result.                        |
 
+## Editing, Saving, and Running a Script
+
+- We can run Python program files or **scripts** from the command prompt or in an Integrated Development Environment (IDE)
+- Running a script from the IDE allows you to construct complex programs, test them, and save them in **program libraries** to reuse or share with others
+- Python program files use the **.py** extension
+
+## Behind the Scenes
+```plaintext
+      +----------------------------+
+      |   Python Code               |
+      +----------------------------+
+                  |
+                  v
+      +----------------------------+
+      |   Syntax Checker and        |
+      |   Translator                |
+      +----------------------------+
+        /                \
+       /                  \
+      v                    v
++------------------+  +--------------------+
+| Syntax Error     |  |    Byte Code        |
+| Messages         |  +--------------------+
++------------------+           |
+                                 v
+                    +----------------------------+
+                    |  Python Virtual Machine     |
+                    |  (PVM)                      |
+                    +----------------------------+
+                               |
+                               v
+                    +-----------------------------+
+                    |       Program Output        |
+                    +-----------------------------+
+                               |
+                               v
+                    +-----------------------------+
+                    |    Runtime Error Messages   |
+                    +-----------------------------+
+
+```
