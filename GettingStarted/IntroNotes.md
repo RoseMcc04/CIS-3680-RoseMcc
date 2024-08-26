@@ -54,3 +54,20 @@ print(<expression>,...,<expression>)
 >>>print("Hi there")
 Hi there
 ```
+- Example Two:
+```shell
+>>>first = int(input("Enter the first number: "))
+Enter the first number: 23
+>>>second = int(input("Enter the second number: "))
+Enter the second number: 46
+>>>print("The sum is", first + second)
+The sum is 69
+```
+| Function Syntax                       | What It Does                                                                 |
+|---------------------------------------|------------------------------------------------------------------------------|
+| `float(<a string of digits>)`         | Converts a string of digits to a floating-point value.                        |
+| `int(<a string of digits>)`           | Converts a string of digits to an integer value.                              |
+| `input(<a string prompt>)`            | Displays the string prompt and waits for keyboard input. Returns the string of characters entered by the user. |
+| `print(<expression>, ...,<expression>)`| Evaluates the expressions and displays them, separated by one space, in the console window. |
+| `<string 1> + <string 2>`             | Glues the two strings together and returns the result.                        |
+
