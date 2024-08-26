@@ -112,3 +112,37 @@ The sum is 69
                     +-----------------------------+
 
 ```
+
+## Detecting and Correcting Syntax Errors
+
+- Programmers inevitably make typographical errors when editing programs, called **syntax errors**
+    - The Python interpreter will usually detect these
+- **Syntax:** rules for forming sentences in a language
+- When Python encounters a syntax error in a program, it halts the execution with an error message
+- Example:
+```shell
+>>>length = int(input("Enter the length: "))
+Enter the length: 44
+>>>print(lenth)
+Traceback (most recent call last):
+File "<pyshell#l>", line 1, in <module>
+NameError: name 'length' is not defined
+```
+- The next statement attempts to print the value of the correctly spelled variable:
+```shell
+>>>print(length)
+SyntaxError: unexpected indent
+```
+- Final example: programmer attempts to add two numbers, but forgets to include the second one
+```shell
+>>>3 +
+SyntaxError: invalid syntax
+```
+
+## Semantic Errors
+
+- A statement is syntactically correct, but logically does not work
+- Examples:
+    - Divide by Zero
+    - Trying to calculate tax before you have the total
+- Usually harder to track down
