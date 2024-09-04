@@ -29,3 +29,22 @@
 
 - A **data type** consists of a set of values and a set of operations that can be performed on those values
 - A **literal** is the way a value of a data type looks to a programmer
+
+## Data Definition
+
+- **Class**
+  - The blueprint of an object
+    - Defines attributes (data) and methods (operations) in a "type" of object
+- **Object**
+    - An *instance* of a class
+        - Represents an actual entity/item as defined by a class
+    - Comprised of a type, methods, and attributes
+```python
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+    
+    def say_hello(self):
+        print(f"Hello, my name is {self.name}.")
+```
