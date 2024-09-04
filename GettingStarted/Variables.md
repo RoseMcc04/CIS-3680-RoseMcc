@@ -5,8 +5,10 @@
 1. [Objectives](#objectvies)
 2. [Memory Storage](#memory-storage)
 3. [Data Types](#data-types)
+4. [Data Definition](#data-definition)
+5. [Built-In Types](#built-in-types)
 
-## Objectvies
+## Objectives
 
 - Understand how memory works
 - Identify what is meant by a data type
@@ -48,3 +50,43 @@ class Person:
     def say_hello(self):
         print(f"Hello, my name is {self.name}.")
 ```
+
+## Built-in Types
+
+- **Numbers**
+    - Integer
+    - Float
+    - Boolean
+    - Complex
+    - Decimal
+    - Fraction
+- **Collections**
+    - Sequences
+        - Immutable
+            - String
+            - Bytes
+            - Tuple
+        - Mutable
+            - List
+            - Bytearray
+    - Mappings
+        - Dictionary
+    - Sets
+        - Set
+        - Frozenset
+- **Callables**
+    - Function
+    - Generator
+    - Class
+    - Method
+- **Other**
+    - Module
+    - Instance
+    - File
+    - None
+    - View
+- **Internal**
+    - Type
+    - Code
+    - Frame
+    - Traceback
