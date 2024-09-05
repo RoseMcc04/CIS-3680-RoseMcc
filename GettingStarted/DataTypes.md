@@ -2,12 +2,13 @@
 
 ## Table of Contents
 
-1. [Objectives](#objectvies)
+1. [Objectives](#objectives)
 2. [Memory Storage](#memory-storage)
 3. [Data Types](#data-types)
 4. [Data Definition](#data-definition)
 5. [Built-In Types](#built-in-types)
 6. [Data Types - Primary](#data-types---primary)
+7. [Escape Sequences](#escape-sequences)
 
 ## Objectives
 
@@ -129,3 +130,16 @@ I'm using a single quote in this string!
 | \\              | The \ character       |
 | \'              | Single quotation mark | 
 | \"              | Double quotation mark | 
+
+## String Concatenation
+
+- You can join two or more string to form a new string using the concatenation operator `+`
+```shell
+>>> "Hi " + "there," + "Rose!"
+'Hi there, Rose!'
+```
+- The `*` operator allows you to build a string by repeating another string given a number of times
+```shell
+>>> "Mango" * 3
+'MangoMangoMango'
+```
