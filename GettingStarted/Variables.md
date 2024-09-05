@@ -121,11 +121,11 @@ I'm using a single quote in this string!
 
 - The newline character **\n** is called an **escape sequence**
 
-| Escape Sequence       | Meaning               | 
--------------------------------------------------
-|       \b              | Backspace             |
-|       \n              | Newline               |
-|       \t              | Horizontal Tab        |
-|       \\              | The \ character       |
-|       \'              | Single quotation mark | 
-|       \"              | Double quotation mark | 
+| Escape Sequence | Meaning               | 
+|-----------------|-----------------------|
+| \b              | Backspace             |
+| \n              | Newline               |
+| \t              | Horizontal Tab        |
+| \\              | The \ character       |
+| \'              | Single quotation mark | 
+| \"              | Double quotation mark | 
