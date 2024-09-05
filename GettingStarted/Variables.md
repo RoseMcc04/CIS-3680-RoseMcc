@@ -4,8 +4,7 @@
 
 1. [Variable Association](#variable-association)
 2. [Naming Variables](#naming-variables)
-3. [Example(s)](#examples)
-4. [How Variables Work](#how-variables-work)
+3. [How Variables Work](#how-variables-work)
 
 ## Variable Association
 
@@ -20,6 +19,18 @@
 
 ## Naming Variables
 
-## Example(s)
+- Variable naming rules
+    - Reserved words <u>cannot</u> be used as variable names
+        - Examples: **if**, **def**, and **import**
+- Name must begin with a letter or _
+- Name can contain any numbers of letters, digits, or _
+- Names are case sensitive
+    - Example: **WEIGHT**, **weight**, and **Weight** are all different names
 
 ## How Variables Work
+
+Variable     -->     Object
+    - Name              - Type
+    - Reference         - Attributes
+                        - Methods
+
