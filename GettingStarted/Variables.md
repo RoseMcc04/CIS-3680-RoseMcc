@@ -4,7 +4,6 @@
 
 1. [Variable Association](#variable-association)
 2. [Naming Variables](#naming-variables)
-3. [How Variables Work](#how-variables-work)
 
 ## Variable Association
 
@@ -26,13 +25,5 @@
 - Name can contain any numbers of letters, digits, or _
 - Names are case sensitive
     - Example: **WEIGHT**, **weight**, and **Weight** are all different names
-
-## How Variables Work
-
-Variable      -->     Object
-
-- Name                  - Type
-- Reference             - Attributes
-                        - Methods
 
 
