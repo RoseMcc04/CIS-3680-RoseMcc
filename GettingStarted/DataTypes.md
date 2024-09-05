@@ -7,6 +7,7 @@
 3. [Data Types](#data-types)
 4. [Data Definition](#data-definition)
 5. [Built-In Types](#built-in-types)
+6. [Data Types - Primary](#data-types---primary)
 
 ## Objectives
 
@@ -90,3 +91,41 @@ class Person:
     - Code
     - Frame
     - Traceback
+
+## Data Types - Primary
+
+- **Integers**
+    - In real life, the range of **integers** is infinite
+    - A computer's memory places a limit on the magnitude of integers
+    - Integer literals are written without commas  
+
+- **Floating-Point Numbers**
+    - Real numbers have **infinite precision**
+    - Python using **floating-point** numbers to *represent* real numbers
+    - Python's typical precision is 16 digits
+    - A floating-point number can be written using either ordinary **decimal notation** or **scientific notation**
+    - Numbers in Python must begin with a numeric digit (0-9), a period (decimal), or a hyphen (negative)  
+
+- **String Literals (Character) Strings**
+    - In Python, a string literal is a sequence of characters enclosed in single or double quotation marks
+    - `''` and `""` represent the **empty string**
+    - Double-quoted strings are handy for composing strings that contain single quotation marks or apostrophes
+```shell
+>>> "I'm using a single quote in this string!"
+"I'm using a single quote in this string!"
+>>> print("I'm using a single quote in this string!")
+I'm using a single quote in this string!
+```  
+
+## Escape Sequences
+
+- The newline character **\n** is called an **escape sequence**
+
+| Escape Sequence | Meaning               | 
+|-----------------|-----------------------|
+| \b              | Backspace             |
+| \n              | Newline               |
+| \t              | Horizontal Tab        |
+| \\              | The \ character       |
+| \'              | Single quotation mark | 
+| \"              | Double quotation mark | 
