@@ -29,8 +29,10 @@
 
 ## How Variables Work
 
-Variable     -->     Object
-    - Name              - Type
-    - Reference         - Attributes
+Variable      -->     Object
+
+- Name                  - Type
+- Reference             - Attributes
                         - Methods
+
 
