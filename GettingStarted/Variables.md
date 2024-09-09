@@ -19,11 +19,16 @@
 ## Naming Variables
 
 - Variable naming rules
-    - Reserved words <u>cannot</u> be used as variable names
-        - Examples: **if**, **def**, and **import**
+    - Reserved words <ins>cannot</ins> be used as variable names
+        - Examples: **print**, **if**, **def**, and **import**
 - Name must begin with a letter or _
 - Name can contain any numbers of letters, digits, or _
 - Names are case sensitive
-    - Example: **WEIGHT**, **weight**, and **Weight** are all different names
+    - Example: **WEIGHT**, **weight**, and **Weight** are all different names  
 
+- Start variable names with **lowercase letters**
+- Use an underscore to separate words in a name to improve readability
+    - *Example: **interest_rate***
+- Programmers use all uppercase letters for **symbolic constants** (contain values that the program never changes)
+    - *Examples: **TAX_RATE** and **STANDARD_DEDUCTION***
 
