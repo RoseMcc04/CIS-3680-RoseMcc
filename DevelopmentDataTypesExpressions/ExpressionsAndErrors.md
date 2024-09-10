@@ -13,7 +13,18 @@
 
 ## Objectives
 
+- Define expressions and their use
+- Discuss mixed mode arithmetic and type casting
+- Examine exception handling
+
 ## Like a Workhorse
+
+- A literal evaluates to itself
+- A variable reference evaluates to the variable's current value
+- **Expressions** provide an easy way to perform operations on data values to produce other values
+- When entered into the Python shell prompt
+    - an expression's operands are evaluated
+    - its operator is then applied to these values to compute the value of the expression
 
 ## Arithmetic Expressions
 
