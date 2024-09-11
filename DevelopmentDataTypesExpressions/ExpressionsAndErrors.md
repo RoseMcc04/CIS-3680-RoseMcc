@@ -131,4 +131,21 @@ finally:
 
 ## Handling Multiple Exceptions
 
+```python
+try:
+    print(x)
+except NameError:
+    print("Variable x is not defined")
+except:
+    print("Something else went wrong")
+```
+
 ## Raising an Exception
+
+```python
+# Raise an error an stop the program if x is lower than 0
+
+x = -1
+if x < 0:
+    raise Exception("Sorry, no numbers below zero")
+```
