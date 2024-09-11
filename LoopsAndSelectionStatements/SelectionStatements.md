@@ -57,6 +57,18 @@ while x <= 100:
 
 ## If-Else Statements
 
+- Also called a two-way selection statement
+- Often used to check inputs for errors
+```python
+import math
+area = float(input("Enter the area: "))
+if area > 0:
+    radius = math.sqrt(area / math.pi)
+    print(f"The area is {radius}.")
+else:
+    print("Error: the area must be a positive number")
+```
+
 ## Multi-Condition Selection Statements
 
 ## Compound Boolean Expressions
