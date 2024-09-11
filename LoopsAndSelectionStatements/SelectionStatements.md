@@ -16,11 +16,44 @@
 
 ## Objectives
 
+- Explain the Boolean data type
+- Explain the variations of the if statement
+- Understand how compound Boolean expressions work 
+
 ## If and Else-If Statements
+
+- **Selection Statement**
+    - allows a computer to make choices based on a **condition**
+```python
+if x > 1:
+    return True
+else:
+    return False
+```
 
 ## The Process
 
+- The **Boolean** data type consists of two values:
+    - **True** and **False**
+- Comparison Operators produce a Boolean result
+- **Boolean expression**
+    - expression that evaluates to True or False
+    - *Example: 4 != 4 evaluates to False*
+
 ## One-Way Selection Statements
+
+- Simplest form of selection is the if statement
+```text
+if <condition>:
+    <sequence of statements>
+```
+- **Example**
+```python
+while x <= 100:
+    if x > 10:
+        print("Scaling x")
+        x /= 10
+```
 
 ## If-Else Statements
 
