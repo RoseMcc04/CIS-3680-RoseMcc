@@ -49,6 +49,10 @@
     - With two exceptions, operations of equal precedence are **left associative**, so they are evaluated from left to right
         - `**` and `=` are **right associative**
     - You can use `()` to change the order of evaluation
+```shell
+>>> 3 + 4 + 2 ** 3
+35
+```
 
 ## Mixed-Mode Arithmetic and Type Casting
 
