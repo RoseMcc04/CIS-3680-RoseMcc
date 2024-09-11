@@ -28,6 +28,25 @@
 
 ## Arithmetic Expressions
 
+- Consists of operands and operators combined in a manner that is already familiar from the study of algebra
+
+| Operator | Meaning                | Syntax        |
+|----------|------------------------|---------------|
+| `**`       | Exponentiation          | `a ** b`   |
+| `-`        | Negation                | `-a`       |
+| `*`        | Multiplication          | `a * b`    |
+| `/`        | Division                | `a / b`    |
+| `//`       | Quotient                | `a // b`   |
+| `%`        | Remainder or modulus    | `a % b`    |
+| `+`        | Addition                | `a + b`    |
+| `-`        | Subtraction             | `a - b`    |
+
+- **Precedence Rules**
+    - `**` has the highest precedence and is evaluated first
+    - Unary negation is evaluated next
+    - `*`, `/`, and `%` are evaluated before `+` and `-`
+    `-` + and `-` are evaluated before `=`
+
 ## Mixed-Mode Arithmetic and Type Casting
 
 ## Try-Except Statements
