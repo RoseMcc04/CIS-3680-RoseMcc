@@ -89,6 +89,29 @@ The income tax is $20880.0
 
 ## Documentation
 
+- **Program Comments**
+    - A piece of program text that the computer ignores but that provides useful documentation to programmers
+- **Docstring**
+    - A multi-line string that starts and ends with a set of 3 quotation marks
+```python
+"""
+Program: bmi.py
+The purpose of this program is to compute
+an individual's Body Mass Index (BMI) based
+on their height in inches and weight in pounds.
+"""
+```
+
 ## Comments
+- Single-line and End-of-line comments
+    - Begin with the `#` symbol and extend to the end of a line
+    - Can explain the purpose of a variable or the strategy used by a portion of code
+```python
+RATE = 0.45 # Conversion rate for pounds to kilograms
+```
 
 ## Extra Advice
+- Begin a program with a statement of purpose and other information helpful to programmers
+- Accompany a variable definition with a comment that explains the variable's purpose
+- Precede major segments of code with brief comments that explain their purpose
+- Include comments to explain the workings of complex or tricky sections of code
