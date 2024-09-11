@@ -51,7 +51,41 @@ round(...)
 
 ## The Math Module
 
+- **Modules**
+    - components of code that include functions and resources
+- Functions like **abs()** and **round()** from the `__builtin__` module are <ins>always available to use</ins>
+- The **math** module includes functions that perform basic mathematical operations
+- To make a module available to your code, you must inport the module
+- To use a resources from a module, you write the name of a module as a qualifier, followed by a dot (`.`) and the name of the resource
+- *Example*
+```shell
+>>> import math
+>>> math.pi
+3.1415926535897931
+>>> math.sqrt(2)
+1.4142135623730951
+```
+- You can avoid the use of the qualifier with each reference by importing the individual resources
+```shell
+>>> from math import pi, sqrt
+>>> print(pi, sqrt(2))
+3.14159265359 1.41421356237
+```
+- You may import all of a module's resources to use without the qualifier
+    - *This is not a good idea if you can avoid it*
+    - *Example: `from math import *`*
+
 ## The Main Module
+
+- To differentiate this script from the other modules in a program, we call it the main module
+    - Like any other module, the main module can be imported
+```shell
+>>> import tax_form
+Enter the gross income: 120000
+Enter the number of dependents: 2
+The income tax is $20880.0
+```
+- After importing a main module, view its documentation by running the help function
 
 ## Documentation
 
