@@ -53,8 +53,51 @@
 >>> 3 + 4 + 2 ** 3
 35
 ```
+- When both operands of an expression are of the same numeric type, the resulting value is also of that type
+- When each operand is of a different type, the resulting value is of the more general type
+    - *Example: 2 `*` 2 is 4, whereas 2 `*` 2.0 is 4.0*
 
 ## Mixed-Mode Arithmetic and Type Casting
+
+- **Mixed-Mode Arithmetic**
+    - involves integers and floating point numbers
+```shell
+>>> 3.14 * 3 * 2
+28.26
+```
+- You must a **type cast** when working with input of numbers
+    - It is a function with the same name as the data type to which it converts
+- Input function returns a string as its value
+    - You can use the **int** or **float** cast to cast the string to a number before performing operations
+| Conversion Function        | Example Use      | Value Returned |
+|----------------------------|------------------|----------------|
+| `int(<a number or a string>)` | `int(3.77)`     | `3`            |
+| `int(<a number or a string>)` | `int('33')`     | `33`           |
+| `float(<a number or a string>)` | `float(22)`    | `22.0`         |
+| `str(<any value>)`          | `str(99)`        | `'99'`         |
+- Note that the **int** cast will cast a **float** to an **int** by truncation <ins>not</ins> by rounding
+```shell
+>>> int(6.75)
+6
+>>> round(6.75)
+7
+>>> round(6.75, 1)
+6.8
+```
+- Type conversion also occurs in the construction of strings from numbers and other strings
+```shell
+>>> profit = 1000.55
+>>> print('$' + profit)
+Traceback (most recent call last):
+    File "<stdin>", line 1, in <module>
+TypeError: cannot concatenate 'str' and 'float' objects
+```
+- Solution: use **str** cast
+```shell
+>>> print('$' + str(profit))
+$1000.55
+```
+- Python is a **strongly typed** programming language
 
 ## Try-Except Statements
 
