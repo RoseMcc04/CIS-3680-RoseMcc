@@ -103,7 +103,31 @@ $1000.55
 
 ## Try-Except Statements
 
+- **Try-Except Statement**
+    - used to catch and handle exceptions
+- Syntax:
+```python
+try:
+    <statement>
+except <exception type>:
+    <statements>
+finally:
+    <statements>
+```
+- The **try** block allows you to test a block of code for errors
+- The **except** block allows you to handle the error
+- The **finally** block allows you to execute code regardless of the result of the previous blocks
+
 ## Example
+
+```python
+try:
+    print(x)
+except:
+    print("Something went wrong")
+finally:
+    print("The 'try-except' is finished")
+```
 
 ## Handling Multiple Exceptions
 
