@@ -69,12 +69,13 @@
     - It is a function with the same name as the data type to which it converts
 - Input function returns a string as its value
     - You can use the **int** or **float** cast to cast the string to a number before performing operations
-| Conversion Function        | Example Use      | Value Returned |
+| Type Cast                  | Example Use      | Value Returned |
 |----------------------------|------------------|----------------|
-| `int(<a number or a string>)` | `int(3.77)`     | `3`            |
-| `int(<a number or a string>)` | `int('33')`     | `33`           |
-| `float(<a number or a string>)` | `float(22)`    | `22.0`         |
-| `str(<any value>)`          | `str(99)`        | `'99'`         |
+| int(<a number or a string>) | int(3.77)        | 3              |
+| int(<a number or a string>) | int('33')        | 33             |
+| float(<a number or a string>)| float(22)       | 22.0           |
+| str(<any value>)            | str(99)          | '99'           |
+
 - Note that the **int** cast will cast a **float** to an **int** by truncation <ins>not</ins> by rounding
 ```shell
 >>> int(6.75)
