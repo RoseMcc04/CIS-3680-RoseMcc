@@ -69,6 +69,7 @@
     - It is a function with the same name as the data type to which it converts
 - Input function returns a string as its value
     - You can use the **int** or **float** cast to cast the string to a number before performing operations
+
 | Type Cast                  | Example Use      | Value Returned |
 |----------------------------|------------------|----------------|
 | int(<a number or a string>) | int(3.77)        | 3              |
