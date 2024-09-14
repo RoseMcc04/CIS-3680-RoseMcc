@@ -100,6 +100,28 @@ else:
 
 ## Compound Boolean Expressions
 
+- Often a course of action must be taken if either of two conditions are true
+```python
+number = int(input("Enter the numeric grade: "))
+if number > 100 or number < 0:
+    print("Error: grade must be between 100 and 0")
+else:
+    print("This is a real grade")
+```
+- Verifying truth tables
+```shell
+>>> A = True
+>>> B = False
+>>> A and B
+False
+>>> A or B
+True
+>>> not A
+False
+```
+- The logical operators are evaluated after comparisons but before the assignment operator
+    - `**not**` has higher precedence than `**and**` and `**or**`
+
 ## Logical Operator Precedence
 
 ## Short-Circuit Evaluation
