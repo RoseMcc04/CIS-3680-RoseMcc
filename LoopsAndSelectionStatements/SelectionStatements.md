@@ -71,6 +71,33 @@ else:
 
 ## Multi-Condition Selection Statements
 
+- A program may be faced with testing conditions that entail more than two alternative courses of action
+- Can be described in code with a **multi-condition selection statement**
+- **Example**
+```python
+number = int(input("Enter the numeric grade: "))
+if number > 89:
+    letter = 'A'
+elif number > 79:
+    letter = 'B'
+elif number > 69:
+    letter = 'C'
+elif number > 59:
+    letter = 'D'
+else:
+    letter = 'F'
+print("The letter grade is " + letter + ".")
+```
+- **Syntax**
+```text
+if <condition-1>:
+    <sequence of statements-1>
+elif <condition-n>:
+    <sequence of statements-n>
+else:
+    <default sequence of statements>
+```
+
 ## Compound Boolean Expressions
 
 ## Logical Operator Precedence
