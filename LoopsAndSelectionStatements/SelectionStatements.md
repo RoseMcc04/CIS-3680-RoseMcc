@@ -49,7 +49,7 @@ if <condition>:
 ```
 - **Example**
 ```python
-while x <= 100:
+while x <= 100 and x >= 0:
     if x > 10:
         print("Scaling x")
         x /= 10
@@ -138,4 +138,22 @@ False
 
 ## Short-Circuit Evaluation
 
+- In **(A and B)**, if **A** is false, then so is the expression, and there is no need to evaluate **B**
+- In **(A or B)**, if **A** is true, then so is the expression, and there is no need to evaluate **B**
+- **Short-Circuit Evaluation**
+    - Evaluation stops as soon as possible
+- **Example**
+```python
+count = int(input("Enter the count: "))
+the_sum = int(input("Enter the sum: "))
+if count > 0 and the_sum // the_count > 10:
+    print("average > 10")
+else:
+    print("count = 0 or average <= 10")
+```
+
 ## Testing Selection Statements
+
+- Make sure that all of the possible branches or alternatives in a selection statement are exercised
+- After testing all of the actions, examine all of the conditions
+- Test conditions that contain compound Boolean expressions using data that produce all of the possible combinations of values of the operands
