@@ -120,7 +120,7 @@ True
 False
 ```
 - The logical operators are evaluated after comparisons but before the assignment operator
-    - `**not**` has higher precedence than `**and**` and `**or**`
+    - **not** has higher precedence than **and** and **or**
 
 ## Logical Operator Precedence
 
