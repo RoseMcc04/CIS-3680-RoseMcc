@@ -124,6 +124,18 @@ False
 
 ## Logical Operator Precedence
 
+| **Operation**              | **Symbol(s)**                |
+|----------------------------|------------------------------|
+| Exponentiation              | `**`                         |
+| Arithmetic negation         | `-`                          |
+| Multiplication, division, remainder | `*`, `/`, `%`        |
+| Addition, subtraction       | `+`, `−`                     |
+| Comparison                  | `==`, `!=`, `<`, `>`, `<=`, `>=` |
+| Logical negation            | `not`                        |
+| Logical conjunction         | `and`                        |
+| Logical disjunction         | `or`                         |
+| Assignment                  | `=`                          |
+
 ## Short-Circuit Evaluation
 
 ## Testing Selection Statements
