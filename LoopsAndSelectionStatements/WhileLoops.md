@@ -32,7 +32,28 @@
 ## While-Loop Structure
 
 - The **while** loop can be used to describe conditional iteration
-- *Example: A program's input loop that accepts values until the user enters a **sentinel** value that terminates the input*
+    - *Example: A program's input loop that accepts values until the user enters a **sentinel** value that terminates the input*
+- Conditional iteration requires that a condition be tested within the loop to determine if it should continue
+    - Called **continuation condition**
+- Syntax
+```python
+while <condition>:
+    <sequence of statements>
+```
+- Improper use may lead to an **infinite loop**
+- Also called an **entry-control loop**
+    - Condition is tested at top of loop
+    - Statements within loop can execute zero or more times
+- **Example**
+```python
+total = 0.0
+data = input("Enter a number or just enter to quit: ")
+while data != "":
+    number = float(data)
+    total += number
+    data = input("Enter a number or just enter to quit: ")
+print(f"The total is {total}.")
+```
 
 ## Count Control
 
