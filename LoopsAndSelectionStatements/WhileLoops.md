@@ -44,7 +44,7 @@ while <condition>:
 - Also called an **entry-control loop**
     - Condition is tested at top of loop
     - Statements within loop can execute zero or more times
-- **Example**
+- *Example:*
 ```python
 total = 0.0
 data = input("Enter a number or just enter to quit: ")
@@ -69,6 +69,31 @@ print(total)
 ```
 
 ## While-True with Break Statement
+
+- The **while** loop can be complicated to write correctly. However, it is possible to simplify its structure and improve its readibility
+```python
+total = 0.0
+while True:
+    data = input("Enter a number or just enter to quit: ")
+    if data = "":
+        break
+    number = float(data)
+    total += number
+print(f"The sum is {total}.")
+```
+- Within this body, the input datum is received, then tested for the loop's **termination condition** in a one-way selection statement
+- The **break** statement will cause an exit from the loop
+- *Example: Using a Boolean variable to control the loop*
+```python
+done = False
+while not done:
+    number = int(input("Enter the numeric grade: "))
+    if number >= 0 and number <= 100:
+        done = True
+    else:
+        print("Error: grade must be between = and 100.")
+print(number) # Echo the valid input
+```
 
 ## Loop Logic, Errors, and Testing
 
