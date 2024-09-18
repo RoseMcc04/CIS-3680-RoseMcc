@@ -14,9 +14,25 @@
 
 ## Objectives
 
+- Understand loops
+- Define how a loop works
+- Explore several ways to implement a while loop
+- Identify how to generate random numbers
+
 ## Underlying Concept
 
+- Repetition statements (or **loops**) repeat a sequence of operations
+- Each repetition is known as a **pass** or **iteration**
+- Two basic types of loops:
+    - **Definite Iteration**
+        - Those that repeat a predefined number of times
+    - **Indefinite Iteration**
+        - Those that repeat until the program determines it needs to stop
+
 ## While-Loop Structure
+
+- The **while** loop can be used to describe conditional iteration
+- *Example: A program's input loop that accepts values until the user enters a **sentinel** value that terminates the input*
 
 ## Count Control
 
