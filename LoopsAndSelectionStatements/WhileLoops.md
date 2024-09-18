@@ -97,8 +97,56 @@ print(number) # Echo the valid input
 
 ## Loop Logic, Errors, and Testing
 
+- Errors to rule out during testing **while** loop:
+    - Incorrectly initialized loop control variable
+    - Failure to update this variable correctly within loop
+    - Failure to test it correctly in continuation condition
+- To halt loop that appears to hang during testing, type `CTRL + c` in the terminal window
+- If loop must run at least once, use a **while True** loop with delayed examination of termination condition
+    - Ensure a **break** statement is reached eventually
+
 ## Using Random Numbers
+
+- Programming languages often include resources for generating **random numbers**
+    - **randint()** returns a random number from among numbers between two arguments, included
+```python
+import random
+x = 0
+while x < 10:
+    print(random.randint(1,6), end = " ")
+    x += 1
+```
+Output: 2 4 6 4 2 3 6 2 2
 
 ## Augmented Assignment
 
+- The assignment symbol can be combined with the arithmetic and concatenation operators to provide augmented assignment operations
+```text
+a += 3 --> a = a + 3
+a -= 3 --> a = a - 3
+a *= 3 --> a = a * 3
+a /= 3 --> a = a / 3
+a %= 3 --> a = a % 3
+s += " there" --> s = s + " there"
+```
+- Format: <variable> <operator>= <expression>
+
 ## Simple Guessing Game Script
+
+```python
+import random
+smaller = int(input("Enter the smaller number: "))
+larger = int(input("Enter the larger number: "))
+my_number = random.randint(smaller, larger)
+count = 0
+while True:
+    count += 1
+    user_number = int(input("Enter your guess:"))
+    if user_number < my_number:
+        print("Too small!")
+    elif user_number > my_number:
+        print("Too large!")
+    else:
+        print(f"Congratulations! You've got it in {count} tries!")
+        break
+```
