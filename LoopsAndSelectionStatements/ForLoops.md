@@ -196,4 +196,44 @@ Your salary is $100.00
 
 ## Newer Style Formatting Output
 
+```python
+msg = "x: {} y: {1:10.3f}".format(x, y)
+print(msg)
+```
+- A string serves as a template with replacement fields; The format method prepares the data according to the format specification and plugs it into the template for printing
+- Replacement fields take the form:
+    - {variable_index[:FormatSpec]}
+- Format specifications:
+    - [[fill]align][sign][#][0][width][grouping_option][.precision][type]
+
+| Type | Meaning |
+|------|---------|
+| None | The same as `g`. |
+| `f`  | Decimal integer. Outputs the number in base 10. |
+| `e`  | Exponent notation. Prints the number in scientific notation using the letter `e` to indicate the exponent. The default precision is 6. |
+| `E`  | Exponent notation. Same as `e` except it uses an uppercase letter `E` as the exponent character. |
+| `F`  | Fixed-point notation. Displays the number as a fixed-point number. The default precision is 6. |
+| `g`  | Fixed-point notation, same as `f`, but converts a ratio to NAN and INF to INF. |
+| `%`  | Percentage. Multiplies the number by 100 and displays it in fixed `f` format, followed by a percent sign. |
+| `b`  | Binary format. Outputs the number in base 2. |
+| `c`  | Character. Converts the integer to the corresponding unicode character before printing. |
+| `o`  | Octal format. Outputs the number in base 8. |
+| `x`  | Hex format. Outputs the number in base 16, using lower-case letters for the digits above 9. |
+| `X`  | Hex format. Outputs the number in base 16, using upper-case letters for the digits above 9. |
+| `n`  | Number. This is the same as `g`, except that it uses the current locale setting to insert the appropriate number separator characters. |
+
+| Align | Meaning |
+|-------|---------|
+| `<`   | Field to be left-aligned within the available space (this is the default for most objects). |
+| `>`   | Field to be right-aligned within the available space (this is the default for numbers). |
+| `=`   | Forces the padding to be placed after the sign (if any) but before the digits. This is used for printing fields in the form `+000000120`. This alignment option is valid only for numeric types. It becomes the default when '0' immediately precedes the field width. |
+| `^`   | Field to be centered within the available space. |
+
 ## The f-string...
+
+- The last, and probably easiest, way to do formatting
+- Like newer style, but without the variable numbering, just use the variable name in the place holder
+```python
+msg = "x: {x:5.2f} y: {y:10.3f}"
+print(msg)
+```
