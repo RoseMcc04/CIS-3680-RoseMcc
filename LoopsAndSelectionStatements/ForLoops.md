@@ -15,9 +15,44 @@
 
 ## Objectives
 
+- Understand for-loops
+- Discuss formatting output
+
 ## Prerequisites
 
+- While loops
+- Basic print function
+
 ## Execute a Statement a Finite Number of Times
+
+- Python's for-loop is the control statement that most easily supports finite iteration
+```shell
+>>> for each_pass in range(4):
+...    print("It's alive!", end = " ")
+>>> It's alive! It's alive! It's alive!
+```
+- The form of this type of loop is:
+```text
+for <variable> in range(<an integer expression>):
+    <statement-1>
+
+    <statement-n>
+```
+- First line of code is sometimes called the loop header
+- The rest of the code is the loop body (must be indented and aligned in the same column)
+- *Example: Loop to compute an exponentiation for a non-negative exponent*
+```shell
+>>> number = 2
+>>> exponent = 3
+>>> product = 1
+>>> for each_pass in range(exponent):
+        product *= number
+        print(product, end = " ")
+2 4 8
+>>> product
+8
+```
+- If the exponent were 0, the loop body would not execute and the value of the product would remain as 1
 
 ## Count-Controlled Loops
 
