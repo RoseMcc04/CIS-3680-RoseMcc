@@ -56,6 +56,38 @@ for <variable> in range(<an integer expression>):
 
 ## Count-Controlled Loops
 
+- Loops that count through a range of numbers
+```shell
+>>> product = 1
+>>> for count in range(4):
+        product *= count + 1
+>>> product
+24
+```
+- To specify an explicit lower bound:
+```shell
+>>> product = 1
+>>> for count in range(1, 5):
+        product *= count
+>>> product
+24
+```
+- *Example: bound-delimited summation*
+```python
+lower = int(input("Enter the lower bound: "))
+upper = int(input("Enter the upper bound: "))
+total = 0
+for number in range(lower, upper + 1):
+    total += number
+print(total)
+```
+```text
+Output 
+Enter the lower bound: 1
+Enter the upper bound: 10
+55
+```
+
 ## Loop Errors: Off-by-One Error
 
 ## Traversing the Contents of a Data Sequence
