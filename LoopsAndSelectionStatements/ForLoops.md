@@ -90,7 +90,40 @@ Enter the upper bound: 10
 
 ## Loop Errors: Off-by-One Error
 
+- *Example*
+```shell
+>>> # Count from 1 through 4, we think
+>>> for count in range(1, 4):
+        print(count)
+1
+2
+3
+```
+- Loop actually counts from 1 through 3
+- Not a syntax error, but rather a logic error
+
 ## Traversing the Contents of a Data Sequence
+
+- **range()**
+    - basically returns a **list**
+```shell
+>>> list(range(4))
+[0, 1, 2, 3]
+>>> list(range(1, 5))
+[1, 2, 3, 4]
+```
+- Strings are also sequences of characters
+- Values in a sequence can be visited with a for-loop:
+```text
+for <variable> in <sequence>:
+    <do something with the variable>
+```
+- *Example*
+```shell
+>>> for char in "Hi there!":
+        print(char, end = " ")
+H i  t h e r e !
+```
 
 ## Specifying the Steps in the Range
 
