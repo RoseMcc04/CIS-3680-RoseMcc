@@ -158,6 +158,42 @@ H i  t h e r e !
 
 ## Old-School Formatting Text for Output
 
+- Many data-processing applications require output that has **tabular format**
+- **Field width**
+    - Total number of data characters and additional spaces for a datum in a formatted string
+- The **print()** function automatically begins printing an output datum in the first available column
+```shell
+>>> for exponent in range(7, 11):
+...     print(exponent, 10 ** exponent)
+7 10000000
+8 100000000
+9 1000000000
+10 10000000000
+```
+- <**format string**> % <**datum**>
+- This version contains a **format string, format operator %**, and single data value to be formatted
+    = To format integers, letter **d** is used instead of **s**
+- To format sequence of data values:
+    - <format string> % (<datum-1>, ..., <datum-n>)
+```shell
+>>> for exponent in range(7, 11):
+...     print("%03d%12d" % (exponent, 10 ** exponent))
+7   10000000
+8   100000000
+9   1000000000
+10  10000000000
+```
+- To format data value of type float:
+    %<field width>.<precision>f where .<precision> is optional
+- *Examples*
+```shell
+>>> salary = 100.00
+>>> print("Your salary is $" + str(salary))
+Your salary is $100.0
+>>> print("Your salary is $%0.2f" % salary)
+Your salary is $100.00
+```
+
 ## Newer Style Formatting Output
 
 ## The f-string...
