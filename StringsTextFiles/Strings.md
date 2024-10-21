@@ -14,7 +14,14 @@
 
 ## Objectives
 
+- Further examining the string data type
+
 ## Motivation
+
+- Text -- The Universal Transfer Format
+    - Comma Separated Variables (CSV)
+    - HTML
+    - Text files
 
 ## The Structure of Strings
 
