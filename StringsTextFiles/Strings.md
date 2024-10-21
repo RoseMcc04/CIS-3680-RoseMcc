@@ -74,7 +74,7 @@ IndexError: string index out of range
 >>> name[-2] # Shorthand for the next-to-last character
 'n'
 ```
-- *Format: <a string>[<an integre expression>]*
+- *Format: a string[an integer expression]*
 - Subscript operator is useful when you want to use the positions as well
   as the characters in a string 
 ```python
@@ -116,5 +116,59 @@ for index in range(len(data)):
 
 ## Testing for Substrings with the `in` Operator
 
+- When used with strings, the left operand of **`in`** is a target substring and 
+  the right operand is the string to be searched
+    - Returns **True** if target string is somewhere in search string, or **False**
+      otherwise
+- This code segment traverses a list of filenames and prints just the file names that 
+  have a `.txt` extension:
+```python
+file_list = ["myfile.txt", "myprogram.exe", "yourfile.txt"]
+for file_name in file_list:
+    if ".txt" in file_name:
+        print(file_name)
+```
+*Output:*
+myfile.txt
+yourfile.txt 
+
 ## String Methods
 
+- Python includes a set of string operations called **methods** that make tasks like 
+  counting the words in a single sentence easy
+```shell
+>>> sentence = input("Enter a sentence: ")
+Enter a sentence: This sentence has no long words. 
+>>> word_list = sentence.split()
+>>> print(f"There are {len(word_list)} words.")
+There are 6 words. 
+>>> sum = 0
+>>> for word in word_list:
+    sum += len(word)
+>>> print(f"The average word length is {sum / len(word_list).}")
+The average word length is 4.5
+```
+- A method behaves like a function, but has a slightly different syntax
+    - A method is always called with a given data value called an **object**
+```text
+<object>.<method name>(<argument-1>,...,<argument-n>)
+```
+- Methods can expect arguments and return values
+- A method knows about the internal state of the object with which it is called 
+- In Python, all data values are objects 
+- View a complete list and documentation of string methods by entering **dir(str)**
+  in a shell prompt `help(str.method-name)` to receive documentation on an individual
+  method
+- *Example: extracting a file name's extension*
+```shell
+>>> "myfile.txt".split('.')
+['myfile', 'txt']
+>>> "myfile.py".split('.')
+['myfile', 'py']
+>>> "myfile.html".split('.')
+['myfile', 'html']
+```
+- The subscript `[-1]` extracts the last element
+    - Can be used to write a general expression for obtaining any file name's 
+      extension, as follows: 
+      `filename.split('.')[-1]`
