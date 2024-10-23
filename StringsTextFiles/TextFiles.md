@@ -16,7 +16,15 @@
 
 ## Objectives
 
+- Understand how to read text files
+- Understand how to write text files
+- Discuss file operations
+
 ## Motivation
+
+- A place to save your strings
+    - Long-term storage
+    - Transport
 
 ## Text Files
 
