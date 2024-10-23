@@ -91,4 +91,31 @@ def odd(x):
 
 ## Defining a Main Function
 
+- **main()** serves as the entry point for a script
+    - Usually expects no arguments and returns no value
+- Definition of **main** and other functions can appear in no particular order in the script
+    - As long as **main()** is called at the end of the script
+- Script can be run from IDE, imported into the shell, or run from a terminal command prompt
+
 ### Main Function Example
+
+```python
+"""
+File: computesquare.py
+Illustrates the definition of a main function.
+
+def main():
+    """The main function for this script."""
+    number = float(input("Enter a number: "))
+    result = square(number)
+    print(f"The square of {number} is {result}.")
+
+def square(x):
+    """Returns the square of x."""
+    return x ** 2
+
+# The entry point for program execution
+if __name__ == "__main__":
+    main()
+"""
+```
