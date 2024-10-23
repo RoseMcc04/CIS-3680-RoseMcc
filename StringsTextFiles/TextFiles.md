@@ -83,7 +83,7 @@ f.close()
 ```shell
 >>> f = open("myfile.txt", 'r')
 ```
-    - If the path name is not accessible from the current working directory, Python raises an error
+- If the path name is not accessible from the current working directory, Python raises an error
 - There are several ways to read data from a file:
     - *Example: the **read()** method*
 ```shell
@@ -159,3 +159,27 @@ print(f"The sum is {total}.")
 | `f.readline()`  | Inputs a line of text and returns it as a string, including the newline. Returns "" if the end of the file is reached. |
 
 ## Accessing and Manipulating Files and Directories on Disk
+
+- The complete set of directories and files forms a tree structure
+    - With a single **root directory** at the top and branches down to nested files and subdirectories
+- You can access any file or directory by using a **pathname**
+    - When the chain starts with the root directory, it is called an **absolute pathname**
+    - When the chain starts from the current working directory, it is called a **relative pathname**
+- To open files named `myfile.txt` in the child, parent, and sibling directories of your current working directory, you can use relative pathnames
+```python
+child_file = open("child/myfile.txt", 'r')
+parent_file = open("../myfile.txt", 'r')
+sibling_file = open("../sibling/myfile.txt", 'r')
+```
+- When designing Python programs that interact with files, it is a food idea to include <ins>error recovery</ins>
+- For instance, before attempting to open a file for input, you should check to see if the file exists
+    - Function **os.path.exists()** supports this checking
+- *Example: To print all of the names of files in the current working directory with a **.py** extension*
+```python
+import os
+current_directory_path = os.getcwd()
+filename_list = os.listdir(current_directory_path)
+for name in filename_list:
+    if ".py" in name:
+        print(name)
+```
