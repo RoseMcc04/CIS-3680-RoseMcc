@@ -28,7 +28,22 @@
 
 ## Text Files
 
+- A text file is a software object that stores data on a permanent medium such as a disk or thumbdrive
+- When compared to keyboard input from a human user, the main advantages of taking input data from a file are:
+    - The dataset can be much larger
+    - The data can accept input much quicker and with less chance of error
+    - The data can be used repeatedly with the same program or different programs
+
 ### Format of Text Files
+
+- Using a text editor such as *Notepad* or *TextEdit*, you can create, view, and save data in a text file
+- A text file containing six floating-point numbers might look like:
+```text
+34.6 22.33 66.75
+77.12 21.44 99.01
+```
+- All data output to or input from a text file must be <ins>strings</ins>
+    - Number must be converted to string before output
 
 ## Writing Text to a File
 
