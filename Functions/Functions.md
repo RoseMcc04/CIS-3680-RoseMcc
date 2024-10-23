@@ -61,7 +61,33 @@ def <function name>(<parameter-1>,...,<parameter-n>):
 
 ## The Return Statement
 
+- Place a **return** statement at each exit point of a function when the function should explicitly return a value
+- Syntax:
+```text
+return <expression>
+```
+- If a function contains no **return** statement, Python transfers control to the caller after the last statement in the function's body is executed
+    - The special value **None** is automatically returned
+
 ## Boolean Functions
+
+- A Boolean function usually tests its argument for the presence or absence of some property
+    - Returns True if property is present, False otherwise
+- Example:
+```shell
+>>> odd(5)
+True
+>>> odd(6)
+False
+```
+```python
+def odd(x):
+    """Returns True if x is odd or False otherwise."""
+    if x % 2 == 1:
+        return True
+    else:
+        return False
+```
 
 ## Defining a Main Function
 
