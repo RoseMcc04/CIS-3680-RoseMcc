@@ -103,6 +103,7 @@ def odd(x):
 """
 File: computesquare.py
 Illustrates the definition of a main function.
+"""
 
 def main():
     """The main function for this script."""
@@ -117,5 +118,4 @@ def square(x):
 # The entry point for program execution
 if __name__ == "__main__":
     main()
-"""
 ```
