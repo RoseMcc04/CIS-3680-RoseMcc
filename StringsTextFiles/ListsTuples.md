@@ -131,6 +131,7 @@ False
 >>> mylist
 [4, 9, 16, 25]
 ```
+
     - *Use the string method `split()` to extract a list of words:*
 ```shell
 >>> sentence = "This example has five words."
