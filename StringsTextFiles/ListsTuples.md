@@ -57,9 +57,91 @@ my_list = [[5, 9], [541, 78]] # list of lists!
 
 ## `list()` Function
 
+- The list function can build a list from any iterable sequence of elements
+```shell
+>>> my_list = list("Hi there!")
+>>> my_list
+['H', 'i', ' ', 't', 'h', 'e', 'r', 'e', '!']
+```
+- A list of integers can be built using `range()`:
+```shell
+>>> mylist = [1, 2, 3, 4]
+>>> myotherlist = list(range(1, 5))
+>>> mylist
+[1, 2, 3, 4]
+>>> myotherlist
+[1, 2, 3, 4]
+```
+
 ## Basic List Operators
 
+- **len()** works on lists as expected
+```shell
+>>> len(mylist)
+4
+>>> mylist[0]
+1
+>>> mylist[2:4]
+[3, 4]
+```
+- Concatenation `+` and equality `==` also work as expected for lists:
+```shell
+>>> mylist + [1, 2, 3, 4, 5, 6]
+>>> mylist == myotherlist
+True
+```
+- To print the contents of a list:
+```shell
+>>> print("1234")
+1234
+>>> print([1, 2, 3, 4])
+[1, 2, 3, 4]
+```
+- **`in`** detects the presence of an element
+```shell
+>>> 3 in [1, 2, 3]
+True
+>>> 0 in [1, 2, 3]
+False
+```
+
 ## Replacing an Element in a List
+
+- A list is **mutable**
+    - Elements can be inserted, removed, or replaced
+    - The list itself maintains its identity, but its **state** - its length and contents - can change
+- Subscript operator is used to replace an element
+```shell
+>>> mylist = [1, 2, 3, 4]
+>>> mylist
+[1, 2, 3, 4]
+>>> mylist[-1] = 0
+>>> mylist
+[1, 2, 3, 0]
+```
+- Subscript is used to reference the target of the assignment, which is not the list but an element's position within it
+- Examples:
+    - *How to replace each number in a list with its square:*
+```shell
+>>> mylist = [2, 3, 4, 5]
+>>> mylist
+[2, 3, 4, 5]
+>>> for i in range(len(mylist)):
+        mylist[i] = mylist[i] ** 2
+>>> mylist
+[4, 9, 16, 25]
+```
+    - *Use the string method `split()` to extract a list of words:*
+```shell
+>>> sentence = "This example has five words."
+>>> words = sentence.split()
+>>> words
+['This', 'example', 'has', 'five', 'words.']
+>>> for i in range(len(words)):
+        words[i] = words[i].upper()
+>>> words
+['THIS', 'EXAMPLE', 'HAS', 'FIVE', 'WORDS.']
+```
 
 ## List Methods
 
