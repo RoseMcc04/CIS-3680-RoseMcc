@@ -19,9 +19,41 @@
 
 ## Objectives
 
+- Explain and explore the list data type
+- Explain the tuple data type
+
 ## Lists
 
+- Sequence of data values (**items** or **elements**) separated by commas inside
+- Strings enclosed in quotes and numbers without quotes
+- A few examples:
+    - Shopping list
+    - To-do list
+    - Roster for an athletic team
+    - Guest list for an event
+    - Recipe - a list of instructions
+    - Text document - a list of lines
+- Each item in a list has a unique **index** that specifies its position (from 0 to length - 1)
+
 ## List Literals
+
+- Syntax:
+    - Square brackets surround the elements contained in the list
+    - Commas separate elements
+    - Elements are literals or expressions
+```python
+my_list = ['apples', 'oranges', 'cherries']
+my_list = [[5, 9], [541, 78]] # list of lists!
+```
+- When an element is an expression, its value is included in the list:
+```shell
+>>> import math
+>>> x = 2
+>>> [x, math.sqrt(x)]
+[2, 1.4142135623730951]
+>>> [x + 1]
+[3]
+```
 
 ## `list()` Function
 
