@@ -121,7 +121,7 @@ False
 ```
 - Subscript is used to reference the target of the assignment, which is not the list but an element's position within it
 - Examples:
-    - *How to replace each number in a list with its square:*
+- *How to replace each number in a list with its square:*
 ```shell
 >>> mylist = [2, 3, 4, 5]
 >>> mylist
@@ -132,7 +132,7 @@ False
 [4, 9, 16, 25]
 ```
 
-    - *Use the string method `split()` to extract a list of words:*
+- *Use the string method `split()` to extract a list of words:*
 ```shell
 >>> sentence = "This example has five words."
 >>> words = sentence.split()
