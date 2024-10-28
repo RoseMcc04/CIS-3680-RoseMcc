@@ -146,6 +146,15 @@ False
 
 ## List Methods
 
+- The **list** type includes several methods for working with elements
+| List Method              | What It Does                                                                                     |
+|--------------------------|--------------------------------------------------------------------------------------------------|
+| `myList.append(element)` | Adds `element` to the end of `myList`                                                            |
+| `myList.extend(aList)`   | Adds the elements of `aList` to the end of `myList`                                              |
+| `myList.insert(index, element)` | Inserts `element` at `index`. If `index` is less than the length of `myList`, `element` is inserted at `index`. Otherwise, `element` is added to the end of `myList`. |
+| `myList.pop()`           | Removes and returns the element at the end of `myList`                                           |
+| `myList.pop(index)`      | Removes and returns the element at `index` in `myList`                                           |
+
 ## Searching a List
 
 ## Sorting a List
