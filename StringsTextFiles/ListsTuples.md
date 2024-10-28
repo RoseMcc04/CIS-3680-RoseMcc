@@ -158,12 +158,62 @@ The **list** type includes several methods for working with elements
 
 ## Searching a List
 
+- **`in`** determines an element's presence or absence, but does 
+not return position of element (if found)
+- Use method `index()` to locate an element's position in a list
+    - Raises an error when the target element is not found 
+```python
+mylist = [34, 45, 67]
+target = 45
+if target in mylist:
+    print(mylist.index(target))
+else:
+    print(-1)
+```
+
 ## Sorting a List
+
+- The method **sort()** mutates a list by arranging its elements 
+in ascending order 
+```shell
+>>> mylist = [4, 2, 10, 8]
+>>> mylist 
+[4, 2, 10, 8]
+>>> mylist.sort()
+>>> mylist 
+[2, 4, 8, 10]
+```
+- When the elements can be related by comparing them with `<`, `>`, 
+and `==`, they can be sorted
 
 ## Mutator Methods and the Value `None`
 
-## Aliasing and Side Effects
-
-## Object Identity and Structural Equivalence
+- All the functions and method examined previously return a value 
+that the caller can then use to complete its work 
+- **Mutator** methods (e.g. insert, appedn, extend, pop, and sort)
+usually return no value of interest to the caller
+    - Python automatically returns the special value **`None`**
+```shell
+>>> mylist = mylist.sort()
+>>> print(mylist)
+None 
+```
 
 ## Tuples
+
+- A tuple resembles a list, but is immutable
+- Indicate by enclosing its elements in parentheses
+```shell
+>>> fruits = ("apple", "banana")
+>>> fruits 
+('apple', 'banana')
+>>> meats = ("fish", "poultry")
+meats 
+('fish', 'poultry')
+>>> food = meats + fruits
+>>> food
+('fish', 'poultry', 'apple', 'banana')
+>>> veggies = ["celery", "beans"]
+>>> tuple(veggies)
+('celery', 'beans')
+```
