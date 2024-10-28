@@ -146,7 +146,8 @@ False
 
 ## List Methods
 
-- The **list** type includes several methods for working with elements
+The **list** type includes several methods for working with elements
+
 | List Method              | What It Does                                                                                     |
 |--------------------------|--------------------------------------------------------------------------------------------------|
 | `myList.append(element)` | Adds `element` to the end of `myList`                                                            |
