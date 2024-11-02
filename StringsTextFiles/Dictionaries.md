@@ -34,7 +34,44 @@
 
 ## Adding Keys and Replacing Values
 
+- Add a new key/value pair to a dictionary using `[]`:
+```text
+dict[key] = value
+```
+- Example:
+```shell
+>>> info = {}
+>>> info["name"] = "Sandy"
+>>> info["occupation"] = "hacker"
+>>> info
+{'name':'Sandy', 'occupation':'hacker'}
+```
+- Use `[]` also to replace a value at an existing key
+```shell
+>>> info["occupation"] = "manager"
+>>> info
+{'name':'Sandy', 'occupation':'manager'}
+```
+
 ## Accessing Values
+
+- Use `[]` to obtain the value associated with a key
+- If the key is not present in the dictionary, an error is raised
+```shell
+>>> info["name"]
+'Sandy'
+>>> info["job"]
+Traceback (most recent call last):
+    File "<pyshell#1>", line 1, in <module>
+        info['job']
+KeyError: 'job'
+```
+- If the existence of a key is incertain, test for it using the dictionary method **has_key()**
+    - Easier strategy is to use the method **get()**
+```shell
+if "job" in info:
+    print(info.["job"])
+```
 
 ## Removing Keys
 
