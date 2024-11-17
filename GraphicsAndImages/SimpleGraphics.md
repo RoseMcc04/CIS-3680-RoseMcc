@@ -17,9 +17,26 @@
 
 ## Objectives
 
+- Use the concepts of object-oriented programming - classes, objects, and methods - to solve a problem
+- Develop algorithms that use simple graphics operations to draw two-dimensional shapes
+- Use the RGB system to create colors in graphics applications and modify pixels in images
+
 ## Simple Graphics
 
+- **Graphics**
+    - Discipline that underlies the representation and display of geometric shapes in two-and-three-dimensional space
+- **Turtle graphics**
+    - Toolkit that provides a simple and enjoyable way to draw pictures in a window
+    - **turtle** is a non-standard, open-source Python module
+
 ## Overview of Turtle Graphics
+
+- Turtle graphics originally developed as part of the children's programming language, **Logo**
+    - *Created by Seymour Papert and his colleagues at MIT in the late 1960s*
+- Analogy: Turtle crawling on a piece of paper, with a pen tied to its tail
+    - Sheet of paper is a window on a display screen
+    - Position specified with **(x, y)** coordinates
+        - Cartesian **coordinate system**, with origin (0, 0) at the center of the window
 
 ## Turtle Operations
 
