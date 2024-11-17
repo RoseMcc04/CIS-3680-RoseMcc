@@ -118,10 +118,96 @@ def drawSquare(t, x, y, length):
 
 ## Draw Two-Dimensional Shapes
 
+- The code for a function to draw a pattern called `radialHexagons()`, expects a turtle, the number of hexagons, and the length of a side as arguments:
+```python
+def radialHexagons(t, n, length):
+    """ Draws a radial pattern of n hexagons with the given length. """
+    for count in range(n):
+        hexagon(t, length)
+        t.left(360 / n)
+```
+
+- The code for drawing a radial pattern using any regular polygon followed by a session using it for squares and hexagons:
+```python
+def radialpattern(t, n, length, shape):
+    """ Draws a radial pattern of n shapes with the given length. """
+    for count in range(n):
+        shape(t, length)
+        t.left(360 / n)
+```
+```shell
+>>> t = Turtle()
+>>> radialPattern(t, n = 10, length = 50, shape = square)
+>>> t.clear()
+>>> radialPattern(t, n = 10, length = 50, shape = hexagon)
+```
+
 ## Examining an Object's Attributes
+
+- **Mutator methods**
+    - methods that change the internal state of a Turtle object
+- **Accessor methods**
+    - methods that return the values of a Turtle object's attributes without altering its state
+- Code that shows accessor methods in action:
+```shell
+>>> from turtle import Turtle
+>>> t = Turtle()
+>>> t.position()
+(0.0, 0.0)
+>>> t.heading()
+0.0
+>>> t.isdown()
+True
+```
 
 ## Manipulating a Turtle's Screen
 
+- Access a turtle's **Screen** object bu using the prompt **t.screen**
+    - Then call a Screen method with this object
+- Methods **window_width()** and **window_height()** can be used to locate the boundaries of a turtle's window
+- Code that resets the screen's background color:
+```python
+from turtle import Turtle
+t = Turtle()
+t.screen.bgcolor("orange")
+x = t.screen.window_width() // 2
+y = t.screen.window_height() // 2
+print((-x, y), (x, -y))
+```
+
 ## Taking a Random Walk
 
+```python
+from turtle import Turtle
+import random
+
+def randomWalk(t, turns, distance = 20):
+    """ Turns a random number of degrees and moves a given distance for a fixed number of turns. """
+    for x in range(turns):
+        if x % 2 == 0:
+            t.left(random.randInt(0, 270))
+        else:
+            t.right(random.randInt(0, 270))
+        t.forward(distance)
+
+def main():
+    t = Turtle()
+    t.shape("turtle")
+    randomWalk(t, 40, 30)
+
+if __name__ == "__main__":
+    main()
+```
+
 ## Colors and the RGB System
+
+- Display area on a computer screen is made up of colored dots called picture elements or **pixels**
+- Each pixel represents a color - default is black
+    - Change the color by running the **pencolor()** method
+- RGB is a common system for representing colors
+    - RGB stands for red, green, and blue
+    - Each color component can range from 0-255
+        - 255 --> macimum saturation of a color component
+        - 0 --> total absence of that color component
+    - A **true color** system
+- Each color component requires 8 bits; total number of bits needed to represent a color value is 24
