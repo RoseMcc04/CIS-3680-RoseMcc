@@ -13,4 +13,3 @@ Course Description: This course focuses on structuring, designing and developing
 7. Simple Graphics and Image Processing
 8. Graphical User Interfaces
 9. Design with Classes
-10. Team Project 
