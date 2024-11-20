@@ -95,10 +95,73 @@ class <class name>(<parent class name>):
 
 ## The `__init__` Method and Instance Variables
 
+- Most classes include the `__init__` method
+```python
+def __init__(self, name, number):
+    """All scores are initially 0."""
+    self.name = name
+    self.scores = []
+    for count in range(number):
+	   self.scores.append(0)
+```
+- *Example: `s = Student("Juan", 5)`*
+- Instance variables represent object attributes
+    - Serve as storage for object state
+    - Scope is the entire class definition
+
 ## The `__str__` Method
+
+- Classes usually include a `__str__` method
+    - Builds and returns a string representation of an object's state
+```python
+def __str__(self) :
+ 	"""Returns the string representation of the student."""
+   	return "Name: " + self.name + "\nScores: " + "".join(map(str, self.scores))
+```
+- When the str function is called with an object, that object's `__str__` is automatically invoked
+- Perhaps the most important use of `__str__` is debugging
 
 ## Accessors and Mutators
 
+- **Accesors**
+    - methods that allow a user to observe but not change the state of an object
+- **Mutators**
+    - methods that allow a user to modify an object's state
+```python
+def setScore(self, i, score):
+	"""Resets the i th score, counting from 1."""
+	self.scores[i − 1] = score
+```
+- *Tip: if there is no need to modify an attribute, do not include a method to do that*
+
 ## Other Special Methods
 
+| **Operator** | **Method Name** |
+|--------------|-----------------|
+| `+`          | `__add__`       |
+| `-`          | `__sub__`       |
+| `*`          | `__mul__`       |
+| `/`          | `__div__`       |
+| `%`          | `__mod__`       |
+
+| **Operator** | **Meaning**       | **Method**  |
+|--------------|-------------------|-------------|
+| `==`         | Equals            | `__eq__`    |
+| `!=`         | Not equals        | `__ne__`    |
+| `<`          | Less than         | `__lt__`    |
+| `<=`         | Less than or equal| `__le__`    |
+| `>`          | Greater than      | `__gt__`    |
+| `>=`         | Greater or equal  | `__ge__`    |
+
+- Object on which the method is called corresponds to the left operand
+    - *Example: x + y is shorthand for `x.__add__(y)`*
+
 ## Rules of Thumb for Defining a Simple Class
+
+- Before writing any code, think about the attributes and behavior of the objects
+- Choose an appropriate class name and develop a short list of the method available to users
+- Write a short script that appears to use the new class in an appropriate way
+- Choose appropriate data structures for attributes
+- Fill in class template with **`__init__`** and **`__str__`**
+- Complete and test remaining methods incrementally
+- Document your code
