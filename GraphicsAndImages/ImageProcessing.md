@@ -135,6 +135,25 @@ Height: 149
 
 ## *A Loop Pattern for Traversing a Grid*
 
+- The following loop uses a row-major traversal
+```shell
+>>> width = 2
+>>> height = 3
+>>> for y in range(height):
+    for x in range(width):
+        print((x, y), end = " ")
+        print()
+(0, 0) (1, 0)
+(0, 1) (1, 1)
+(0, 2) (1, 2)
+```
+- We use this templateto develop many of the algorithms that follow: 
+```text
+for x in range(width):
+    for y in range(height):
+        <do something at position (x, y)>
+```
+
 ## A Word on Tuples 
 
 - A pixel's RGB values are stored in a tuple:
@@ -152,12 +171,146 @@ Height: 149
 
 ## *Converting an Image to Black and White* 
 
+- For each pixel, compute an average of RGB values
+- Then, reset pixel's color values to 0 (black) if the average is closer to 0, or in 255 (white) if the average is closer to 255
+```python
+def blackAndWhite(image):
+	“““Converts the argument image to black and white.”””
+	blackPixel = (0, 0, 0)
+	whitePixel = (255, 255, 255)
+	for y in range(image.getHeight()):
+	   for x in range(image.getWidth()):
+		(r, g, b) = image.getPixel(x, y)
+		average = (r + g + b) // 3
+		if average < 128:
+		   image.setPixel(x, y, blackPixel)
+		else:
+		   image.setPixel(x, y, whitePixel)
+```
+
 ## *Converting an Image to Grayscale*
+
+- Black and white photographs contain various shades of gray known as grayscale
+- Grayscale can be an economical scheme (only color values might be 8, 16, or 256 shades of gray)
+- A simple method:
+```python
+average = (r + g + b) // 3
+image.setPixel(x, y, (average, average, average))
+```
+- Problem: Does not reflect manner in which different color components affect human perception
+- Scheme needs to take differences in luminance into account
+```python
+def grayscale(image):
+	“““Converts the argument image to grayscale.”””
+	for y in range(image.getHeight()):
+	   for x in range(image.getWidth()):
+	   (r, g, b) = image.getPixel(x, y)
+	   r = int(r * 0.299)
+	   g = int(g * 0.587)
+	   b = int(b * 0.114)
+	   lum = r + g + b
+	   image.setPixel(x, y, (lum, lum, lum))
+```
 
 ## *Copying an Image*
 
+- The method **clone()** builds and returns a new image with the same attributes as the original one, but with an empty string as the filename
+```python
+>>> from images import Image
+>>> image = Image("smokey.gif")
+>>> image.draw()
+>>> newImage = image.clone() # Create a copy of image
+>>> newImage.draw()
+>>> grayscale(newImage) # Change in second window only
+>>> newImage.draw()
+>>> image.draw() # Verify no change to original
+```
+
 ## *Blurring an Image*
+
+- Pixelation can be mitigated by blurring:
+```python
+def blur(image):
+    """Builds and returns a new image which is a
+    blurred copy of the argument image."""
+    def tripleSum(triple1, triple2):
+	   (r1, g1, b1) = triple1
+	   (r2, g2, b2) = triple2
+	   return (r1 + r2, g1 + g2, b1 + b2)
+    new = image.clone()
+    for y in range(1, image.getHeight() - 1):
+    for x in range(1, image.getWidth() - 1):
+        old P = image.getPixel(x, y)
+	   left = image.getPixel(x - 1, y) # To left
+	   right = image.getPixel(x + 1, y) # To right
+	   top = image.getPixel(x, y - 1) # Above
+	   bottom = image.getPixel(x, y + 1) # Below
+	   sums = reduce(tripleSum, [oldP, left, right, top, bottom])
+	   averages = tuple(map(lambda x: x // 5, sums))
+	   new.setPixel(x, y, averages)
+    return new
+```
 
 ## *Edge Detection* 
 
+- Edge detection removes the full colors to uncover the outlines of the objects represented in the image
+```python
+def detectEdges(image, amount):
+	“““Builds and returns a new image in which the edges of
+	the argument image are highlighted and the colors are
+	reduced to black and white.”””
+
+	def average(triple):
+	    (r, g, b) = triple
+	    return (r + g + b) // 3
+
+	blackPixel = (0, 0, 0)
+	whitePixel = (255, 255, 255)
+	new = image.clone()
+    for y in range(image.getHeight() − 1):
+	for x in range(1, image.getWidth()):
+	   oldPixel = image.getPixel(x, y)
+	   leftPixel = image.getPixel(x − 1, y)
+	   bottomPixel = image.getPixel(x, y + 1)
+	   old Lum = average(oldPixel)
+	   left Lum = average(leftPixel)
+	   bottom Lum = average(bottomPixel)
+	   if abs(oldLum − leftLum) > amount or \
+		abs(oldLum − bottomLum) > amount:
+		new.setPixel(x, y, blackPixel)
+	   else:
+		new.setPixel(x, y, whitePixel)
+    return new
+```
+
 ## *Reducing the Image Size*
+
+- The size and quality of an image on a display medium depend on two factors:
+    - Image's width and height in pixels
+    - Display medium's **resolution**
+        - Measured in pixels, or dots per inch
+- The resolution of an image can be set before the image is captured
+    - A higher dots per inch causes sampling device to take more samples (pixels) through the two-dimensional grid
+- A size reduction usually preserves an image's **aspect ratio**
+- Reducing an image's size throws away some of its pixel information
+```python
+def shrink(image, factor):
+	“““Builds and returns a new image which is a smaller
+	copy of the argument image, by the factor argument.”””
+	width = image.getWidth()
+	height = image.getHeight()
+	new = Image(width // factor, height // factor)
+	oldY = 0
+	newY = 0
+	while oldY < height - factor:
+	   oldX = 0
+	   newX = 0
+	   while oldX < width - factor:
+		oldP = image.getPixel(oldX, oldY)
+		new.setPixel(newX, newY, oldP)
+		oldX += factor
+		newX += 1
+	   oldY += factor
+	   newY += 1
+	return new
+```
