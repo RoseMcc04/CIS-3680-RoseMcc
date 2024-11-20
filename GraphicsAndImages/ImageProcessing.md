@@ -22,7 +22,16 @@
 
 ## Objectives 
 
+- Develop recursive algorithms to draw recursive shapes
+- Write a nested loop to process a two-dimensional grid
+- Develop algorithms to perform simple transformations of images, such as conversion of color to grayscale
+
 ## Image Processing 
+
+- Digital image processing includes the principles and techniques for the following:
+    - The capture of images with devices such as flatbed scanners and digital cameras 
+    - The representation and storage of images in efficient file formats 
+    - Constructing the algorithms in image-manipulation programs such as *Adobe Photoshop*
 
 ## Analog and Digital Information 
 
