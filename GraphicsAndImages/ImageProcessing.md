@@ -35,9 +35,29 @@
 
 ## Analog and Digital Information 
 
+- Computers must use digital information which consists of **discrete values**
+    - *Examples: Individual integers, characters of text, or bits*
+- The information contained in images, sound, and much of the rest of the world is analog 
+    - **Analog information** contains a **continuous range** of values 
+- Ticks representing seconds on an analog clock's face represent an attempt to **sample** moments of time as discrete values (time itself is continuous)
+
 ## Sampling and Digitizing Images 
 
+- A visual scene projects an infinite set of color and intensity values onto a two-dimensional sensing medium
+    - If you sample enough of these values, digital information can represent an image more or less distinguishable (to the human eye) from the origin scene
+- Sampling devices measure discrete color values at distinct points on a two-dimension **grid**
+    - These values are pixels
+    - As more pixels are sampled, the more realistic the resulting image will appear
+
 ## Image File Formats
+
+- Once an image has been sampled, it can be stored in one of many file formats
+- A **raw image file** saves all the sampled information 
+- Data can be compressed to minimize its file size
+    - JPEG (Joint Photographic Experts Group)
+        - Uses **lossless compression** and a **lossy scheme**
+    - GIF (Graphic Interchange Format)
+        - Uses a lossy compression and a **color palette** of up to 256 of the most prevalent colors in the image
 
 ## Image-Manipulation Operations 
 
