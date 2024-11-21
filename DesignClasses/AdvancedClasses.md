@@ -66,7 +66,19 @@ def __init__(self, fileName = None):
 
 ## Structuring Classes with Inheritance and Polymorphism
 
+- Most object-oriented languages require the programmer to master the following techniques:
+    - **Data encapsulation**:
+        - Restricting manipulation of an object's state by external users to use a set of method calls
+    - **Inheritance**:
+        - Allowing a class to automatically reuse and extend code of similar but more general classes
+    - **Polymorphism**:
+        - Allowing several different classes to use the same general method names
+- Python's syntax does not enforce data encapsulation
+- Inheritance and polymorphism are built into Python
+
 ## Inheritance Hierarchies and Modeling
+
+![Example Image 1](https://www.softwareideas.net/i/DirectImage/1864/Inheritance-in-UML-Class-Diagram)
 
 ## *Example: A Restricted Savings Account*
 
