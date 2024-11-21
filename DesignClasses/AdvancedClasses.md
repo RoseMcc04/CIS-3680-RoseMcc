@@ -134,4 +134,25 @@ Dealer busts and you win
 
 ## Polymorphic Methods
 
+- We create a subclass when two classes share a substantial amount of **abstract behavior**
+    - The classes have similar sets of methods/operations
+    - A subclass usually adds something extra
+- The two classes may have the same interface
+    - One or more methods in subclass override the definitions of the same methods in the superclass to provide specialized versions of the abstract behavior
+        - **Polymorphic methods** (e.g., the `__str__` method)
+
 ## Costs and Benefits of Object-Oriented Programming
+
+- **Imperative programming**
+    - Code consists of input/output, assignment, and control (selection/iteration) statements
+    - Does not scale well
+- Improvement: Embedding sequences of imperative code in function definitions or subprograms
+    - **Procedural programming**
+- **Functional programming**
+    - Views a program as a set of cooperating functions
+        - No assignment statements
+- Functional programming does not conveniently model situations where data must change state
+- Object-oriented programming attempts to control the complexity of a program while still modeling data that changes their state
+    - Divides up data into units called objects
+    - Well-designed objects decrease likelihood that system will break when changes are made within a component
+    - Can be overused and abused
