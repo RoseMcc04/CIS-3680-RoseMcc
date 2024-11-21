@@ -79,10 +79,58 @@ def __init__(self, fileName = None):
 ## Inheritance Hierarchies and Modeling
 
 ![Example Image 1](https://www.softwareideas.net/i/DirectImage/1864/Inheritance-in-UML-Class-Diagram)
+- In Python, all classes automatically extend the built-in object class
+- It is possible to extend any existing class:
+```text
+class <new class name>(<existing parent class name>):
+```
+- *Example*:
+    - ***PhysicalObject** would extend **object***
+- Inheritance hierarchies provide an abstraction mechanism that allows the programmer to avoid reinventing the wheel or writing redundant code
 
 ## *Example: A Restricted Savings Account*
 
+```shell
+>>> account = RestrictedSavingsAccount("Ken", "1001", 500.00)
+>>> print(account)
+Name: Ken
+PIN: 1001
+Balance: 500.0
+>>> account.getBalance()
+500.0
+>>> for count in range(3):
+account.withdraw(100)
+>>> account.withdraw(50)
+‘No more withdrawals this month’
+>>> account.resetCounter()
+>>> account.withdraw(50)
+```
+- To call a method in the parent class from within a method with the same name in a subclass:
+```text
+<parent class name>.<method name>(self, <other arguments>)
+```
+
 ## *Example: The Dealer and a Player in the Game of Blackjack*
+
+- An object belonging to Blckjack class sets up the game and manages the interaction with the user
+```shell
+>>> from blackjack import Blackjack
+>>> game = Blackjack()
+>>> game.play()
+Player:
+2 of Spades, 5 of Spades
+7 points Dealer:
+5 of Hearts
+Do you want a hit? [y/n]: y
+Player:
+2 of Spades, 5 of Spades, King of Hearts
+17 points
+Do you want a hit? [y/n]: n
+Dealer:
+5 of Hearts, Queen of Hearts, 7 of Diamonds
+22 points
+Dealer busts and you win
+```
 
 ## Polymorphic Methods
 
