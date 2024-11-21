@@ -15,9 +15,54 @@
 
 ## Objectives
 
+- Exploit inheritance and polymorphism when developing classes
+- Transfer objects to and from files
+
 ## Using pickle for Permanent Storage of Objects
 
+- **pickle** allows a programmer to save and load objects using a process called **pickling**
+    - Python takes care of all of the conversion details
+```python
+import pickle
+
+def save(self, fileName = None):
+   """Saves pickled accounts to a file. The parameter
+   allows the user to change filenames."""
+   if fileName != None:
+      self.fileName = fileName
+   elif self.fileName == None:
+      return
+   fileObj = open(self.fileName, "wb")
+   for account in self.accounts.values():
+      pickle.dump(account, fileObj)
+   fileObj.close()
+```
+
 ## Input of Objects and the try-except Statement
+
+```text
+try:
+    <statement(s)>
+except <exception type>:
+    <statement(s)>
+```
+```python
+def __init__(self, fileName = None):
+     """Creates a new dictionary to hold the accounts.
+    If a filename is provided, loads the accounts from
+    a file of pickled accounts."""
+    self.accounts = {}
+    self.fileName = fileName
+    if fileName != None:
+        fileObj = open(fileName, "rb")
+        while True:
+	        try:
+	            account = pickle.load(fileObj)
+	            self.add(account)
+	        except EOFError:
+ 	            fileObj.close()
+	            break
+```
 
 ## Structuring Classes with Inheritance and Polymorphism
 
