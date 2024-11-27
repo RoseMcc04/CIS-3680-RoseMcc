@@ -86,7 +86,7 @@
 
 ## *Example: A Simple "Hello world!" Program*
 
-- A new winsow class extends the EasyFrame class 
+- A new window class extends the EasyFrame class 
 - The EasyFrame class provides the basic functionality for any window 
 ```python
 """
@@ -171,6 +171,35 @@ EasyFrame.__init__(self, width = 300, height = 200, title = "Label Demo")
 | setTitle(title)       | Sets the window's title to `title`                    |
 
 ## Window Layout
+
+- Window components are laid out in the window's two-dimensional **grid** 
+    - Rows and columns are numbered from the position (0, 0) in the upper left corner of the window 
+- *Example:*
+```python
+from breezypythongui import EasyFrame
+
+class LayoutDemo(EasyFrame):
+    """
+    Displays labels in the quadrants.
+    """
+    def __init__(self):
+        """
+        Sets up the window and the labels.
+        """
+        EasyFrame.__init__(self)
+        self.addLabel(text = "(0, 0)", row = 0, column = 0)
+        self.addLabel(text = "(0, 1)", row = 0, column = 1)
+        self.addLabel(text = "(1, 0)", row = 1, column = 0)
+        self.addLabel(text = "(1, 1)", row = 1, column = 1)
+```
+- Each type of window component has a default alignment 
+- Programmers can override the default alignment by including the **sticky** attribute as a keyword argument 
+```python
+self.addLabel(text = "(0, 0)", row = 0, column = 0, sticky = "NSEW")
+self.addLabel(text = "(0, 1)", row = 0, column = 1, sticky = "NSEW")
+self.addLabel(text = "(1, 0)", row = 1, column = 0, sticky = "NSEW")
+self.addLabel(text = "(1, 1)", row = 1, column = 1, sticky = "NSEW")
+```
 
 ## Types of Window Components and Their Attributes
 
