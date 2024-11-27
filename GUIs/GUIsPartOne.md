@@ -203,7 +203,59 @@ self.addLabel(text = "(1, 1)", row = 1, column = 1, sticky = "NSEW")
 
 ## Types of Window Components and Their Attributes
 
+- **breezypythongui** includes methods for adding each type of window component to a window 
+- Each method uses the form:
+```text
+self.addComponentType(<arguments>)
+```
+- When this method is called, **breezypythongui**:
+    - Creates an instance of the requested type of window component 
+    - Initializes the component's attributes with default values or any values provided by the programmer 
+    - Places the component in its grid position (the row and column are required arguments) 
+    - Returns a reference to the component 
+
 ## Displaying Images
+
+- The image label is first added to the window with an empty string 
+    - Program then creates a **PhotoImage** object from an image file and sets the **image** attribute of the image label to this object 
+    - The program creates a **Font** object with a non-standard font and resets the text label's font and foreground attributes to obtain the caption shown below 
+- Code:
+```python
+from breezypythongui import EasyFrame
+from tkinter import PhotoImage
+from tkinter.font import Font
+class ImageDemo(EasyFrame):
+    """
+    Displays an image and a caption.
+    """
+    def __init__(self):
+	   """Sets up the window and the widgets."""
+	   EasyFrame.__init__(self, title = "Image Demo")
+	   self.setResizable(False);
+	   imageLabel = self.addLabel(text = " ",
+				row = 0, column = 0,
+				sticky = "NSEW")
+	   textLabel = self.addLabel(text = "Smokey the cat",
+				row = 1, column = 0,
+				sticky = "NSEW")
+
+    # Load the image and associate it with the image label.
+    self.image = PhotoImage(file = "smokey.gif")
+    imageLabel["image"] = self.image
+
+    # Set the font and color of the caption.
+    font = Font(family = "Verdana", size = 20,
+            slant = "italic")
+    textLabel["font"] = font
+    textLabel["foreground"] = "blue"
+```
+| Label Attribute | Type of Value                                    |
+|-----------------|-------------------------------------------------|
+| `image`         | A PhotoImage object (imported from `tkinter`)   |
+| `text`          | A string                                        |
+| `background`    | A color                                         |
+| `foreground`    | A color (color of text)                         |
+| `font`          | A Font object (imported from `tkinter.font`)    |
 
 ## Command Buttons and Responding to Events
 
