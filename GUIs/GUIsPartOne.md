@@ -146,7 +146,29 @@ if __name__ == "__main__":
 
 ## Windows and Window Components
 
+- This section explores the details of windows and window components
+- You will also learn how to:
+    - Choose appropriate classes of GUI objects 
+    - Access and modify their attributes 
+    - Organize them to cooperate to perform the task at hand 
+
 ## Windows and Their Attributes
+
+- Most important attributes: 
+    - Title (an empty string by default) 
+    - Width and height in pixels 
+    - Resizability (true by default) 
+    - Background color (white by default)
+- *Example of overriding dimensions and title:*
+```python
+EasyFrame.__init__(self, width = 300, height = 200, title = "Label Demo")
+```
+| EasyFrame Method      | What It Does                                           |
+|-----------------------|-------------------------------------------------------|
+| setBackground(color)  | Sets the window's background color to `color`         |
+| setResizable(boolean) | Makes the window resizable (`True`) or not (`False`)  |
+| setSize(width, height)| Sets the window's width and height in pixels          |
+| setTitle(title)       | Sets the window's title to `title`                    |
 
 ## Window Layout
 
