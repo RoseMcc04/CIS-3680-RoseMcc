@@ -259,6 +259,75 @@ class ImageDemo(EasyFrame):
 
 ## Command Buttons and Responding to Events
 
+- A command button is added to a window just like a label 
+    - By specifying its text and position in the grid 
+- A button is centered in its grid position by default 
+- The method **addButton()** accomplishes all of this and returns an object of type **tkinter.Button** 
+```python
+class ButtonDemo(EasyFrame):
+	"""Illustrates command buttons and user events."""
+
+	def __init__(self):
+	   """Sets up the window, label, and buttons."""
+	   EasyFrame.__init__(self)
+
+	   # A single label in the first row.
+	   self.label = self.addLabel(text = "Hello world!",
+					row = 0, column = 0,
+					columnspan = 2,
+					sticky = "NSEW")
+	# Two command buttons in the second row.
+	self.clearBtn = self.addButton(text = "Clear",
+					row = 1, column = 0)
+	self.restoreBtn = self.addButton(text = "Restore",
+					row = 1, column = 1,
+					state = "disabled")
+```
+
 ## Input and Output with Entry Fields
 
+- **Entry field** 
+    - A box in which the user can position the mouse cursor and enter a number or a single line of text 
+- This section explores the use of entry fields to allow a GUI program to take input text or numbers from a user 
+    - And display text or numbers as input 
+
 ## Text Fields
+
+- **Text field**
+    - Appropriate for entering or displaying a single-line string of characters 
+- Programmers use the method **addTextField()** to add a text field to the window 
+    - The method returns an object of type **TextField**, which is a subclass of **tkinter.Entry**
+- Required arguments to **addTextField()** are:
+    - **text**, **row**, and **column**
+    - Optional arguments are **rowspan**, **columnspan**, **sticky**, **width**, and **state**
+- Code:
+```python
+class TextFieldDemo(EasyFrame):
+	""" Converts an input string to uppercase and displays
+	the result. """
+	def __init__(self):
+	 """ Sets up the window and widgets."""
+	    EasyFrame.__init__(self, title = "Text Field Demo")
+	    # Label and field for the input
+	    self.addLabel(text = "Input", row = 0, column = 0)
+	    self.inputField = self.addTextField(text = " ",
+						row = 0,
+						column = 1)
+	    # Label and field for the output
+	    self.addLabel(text = "Output", row = 1, column = 0)
+	    self.outputField = self.addTextField(text = " ",
+						row = 1,
+						column = 1,
+						state = "readonly")
+    # The command button
+	    self.addButton(text = "Convert", row = 2, column = 0,
+			   columnspan = 2, command = self.convert)
+	
+	# The event handling method for the button
+	def convert(self):
+	    """ Inputs the string, converts it to uppercase,
+	    and outputs the result."""
+	    text = self.inputField.getText()
+	    result = text.upper()
+	    self.outputField.setText(result)
+```
