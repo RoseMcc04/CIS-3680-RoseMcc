@@ -66,15 +66,83 @@
 
 ## Event-Driven Programming
 
+- User-generated **events** (e.g., mouse clicks) trigger operations in the program to respond by pulling in inputs, processing them, and displaying results 
+    - **Event-driven** software 
+    - **Event-driven programming**
+- Coding phase:
+    - Define a new class to represent the main window 
+    - Instantiate the classes of window objects needed for this application (e.g., labels, command buttons) 
+    - Position these components in the window 
+    - Instantiate the data model and provide any default data in the window objects 
+    - Register controller methods with each window object in which a relevant event might occur 
+    - Define these controller methods 
+    - Define a **main()** that launches the GUI 
+
 ## Coding Simple GUI-Based Programs
+
+- There are many libraries and toolkits of GUI components available to the average Python programmer 
+    - **tkinter** includes classes for windows and numerous types of window objects 
+    - **breezypythongui** is a custom, open-source module for GUI development 
 
 ## *Example: A Simple "Hello world!" Program*
 
+- A new winsow class extends the EasyFrame class 
+- The EasyFrame class provides the basic functionality for any window 
+```python
+"""
+File: labeldemo.py
+"""
+from breezypythongui import Easy Frame
+class LabelDemo(EasyFrame):
+    """
+    Displays a greeting in a window.
+    """
+    def __init__(self):
+        """
+        Sets up the window and the label.
+        """
+        EasyFrame.__init__(self)
+        self.addLabel(text = "Hello world!", row = 0, column = 0)
+
+def main():
+    """
+    Instantiates and pops up the window.
+    """
+    LabelDemo.mainloop()
+
+if __name__ == "__main__":
+    main()
+```
+
 ## A Template for All GUI Programs
+
+- The structure of a GUI program is always the same, so there is a template: 
+```text
+from breezypythongui import EasyFrame 
+
+class ApplicationName(EasyFrame):
+    __init__(self):
+        # Definitions of event handling methods
+
+def main():
+    ApplicationName().mainloop()
+
+if __name__ == "__main__":
+    main()
+```
 
 ## Syntax of Class and Method Definitions
 
+- Each definition has a one-line header that begins with a keyword (class or def) 
+    - Followed by a body of code indented one level in the text 
+- A class header contains the name of the class followed by a parenthesized list of one or more parent classes 
+- The body, nested one tab under the header, consists of one or more method definitions 
+- A method header looks like a function header 
+    - But a method always has at least one parameter named **self**
+
 ## Subclassing and Inheritance as Abstraction Mechanisms
+
+![Inheritance Example Diagram](https://www.cs.colostate.edu/~cs163/.Summer20/assets/img/labs/UML_Lab_16.png)
 
 ## Windows and Window Components
 
